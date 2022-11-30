@@ -75,35 +75,35 @@ window.geometry("600x400")
 frame = customtkinter.CTkFrame(master=window)
 frame.pack(padx=10, pady=10, fill="both", expand=True)
 
-# # insert logo
-# logo = ImageTk.PhotoImage(Image.open("logo.png"))
-# label = customtkinter.CTkLabel(master=frame, image=logo)
-# label.grid(row=0, column=1, columnspan=2)
+# insert logo
+logo = ImageTk.PhotoImage(Image.open("logo.png"))
+label = customtkinter.CTkLabel(master=frame, image=logo)
+label.grid(row=0, column=1, columnspan=2, sticky=W, padx=40)
 
 # labels
 w_label = customtkinter.CTkLabel(master=frame, text="Website:", text_font=BOLD_FONT)
-w_label.grid(row=0, column=0, padx=10, pady=10)
+w_label.grid(row=1, column=0, padx=10, pady=10)
 e_label = customtkinter.CTkLabel(master=frame, text="Email/Username:", text_font=BOLD_FONT)
-e_label.grid(row=1, column=0, padx=10, pady=10)
+e_label.grid(row=2, column=0, padx=10, pady=10)
 p_label = customtkinter.CTkLabel(master=frame, text="Password:", text_font=BOLD_FONT)
-p_label.grid(row=2, column=0, padx=10, pady=10)
+p_label.grid(row=3, column=0, padx=10, pady=10)
 
 # Entries
 w_entry = customtkinter.CTkEntry(master=frame, text_font=FONT, width=350)
-w_entry.grid(row=0, column=1, columnspan=2, padx=30)
+w_entry.grid(row=1, column=1, columnspan=2, padx=30)
 
 e_entry = customtkinter.CTkEntry(master=frame, text_font=FONT, width=350)
-e_entry.grid(row=1, column=1, columnspan=2, padx=30)
+e_entry.grid(row=2, column=1, columnspan=2, padx=30)
 
 p_entry = customtkinter.CTkEntry(master=frame, text_font=PW_FONT, text=generate_password)
-p_entry.grid(row=2, column=1, sticky=E, padx=20)
+p_entry.grid(row=3, column=1, sticky=E, padx=20)
 
 # button
 generate_pw = customtkinter.CTkButton(master=frame, text="Generate Password", text_font=FONT, command=generate_password)
-generate_pw.grid(row=2, column=2, sticky=W, padx=20)
+generate_pw.grid(row=3, column=2, sticky=W, padx=20)
 
-add_button = customtkinter.CTkButton(master=frame, text="Add Password", text_font=FONT, width=150, command=save)
-add_button.grid(row=3, column=1, columnspan=2, pady=10)
+add_button = customtkinter.CTkButton(master=frame, text="Add Password", text_font=FONT, width=350, command=save)
+add_button.grid(row=4, column=1, columnspan=2, pady=10)
 
 
 
